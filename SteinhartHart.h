@@ -28,7 +28,7 @@
 
 #include <inttypes.h>
 
-#define V_IN 5.0	// Input voltage
+#define V_IN 3.3	// Input voltage
 #define K 9.5		// Dissipation factor (mW/°C)
 
 
