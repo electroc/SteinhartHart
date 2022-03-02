@@ -36,8 +36,8 @@ double SteinhartHart::steinhartHart(double r)
 double SteinhartHart::getTempKelvin() 
 {
 	double adc_raw = analogRead(_reading_pin);
-	double voltage = adc_raw / 1024 * V_IN;
-	double resistance = ((1024 * _resistance / adc_raw) - _resistance);
+	double voltage = adc_raw / 4095 * V_IN;
+	double resistance = ((4095 * _resistance / adc_raw) - _resistance);
 	
 	// Account for dissipation factor K
 	return steinhartHart(resistance) - voltage * voltage / (K * _resistance);
